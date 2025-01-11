@@ -6,12 +6,11 @@
 /*   By: adechaji <adechaji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 00:34:20 by adechaji          #+#    #+#             */
-/*   Updated: 2025/01/09 17:32:46 by adechaji         ###   ########.fr       */
+/*   Updated: 2025/01/10 22:51:47 by adechaji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
-#include <stdio.h>
+#include "../so_long.h"
 
 static char	*cutnewline(char *line)
 {
@@ -22,6 +21,7 @@ static char	*cutnewline(char *line)
 		line[len - 1] = '\0';
 	return (line);
 }
+
 static int	retlen(int fd)
 {
 	char	*line;
@@ -35,9 +35,11 @@ static int	retlen(int fd)
 		free(line);
 		line = get_next_line(fd);
 	}
+	free(line);
 	return (i);
 }
-static char **readlines(int len, int fd)
+
+static char	**readlines(int len, int fd)
 {
 	char	**map;
 	char	*line;
@@ -67,8 +69,8 @@ char	**readmap(char **av)
 {
 	int		fd;
 	int		len;
-	char 	**map;
-	
+	char	**map;
+
 	fd = open(av[1], O_RDONLY);
 	if (fd == -1)
 		return (NULL);

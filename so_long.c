@@ -6,13 +6,13 @@
 /*   By: adechaji <adechaji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 17:36:04 by adechaji          #+#    #+#             */
-/*   Updated: 2025/01/09 18:57:57 by adechaji         ###   ########.fr       */
+/*   Updated: 2025/01/10 22:51:52 by adechaji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
 	t_mlx	mlx;
 
@@ -32,6 +32,7 @@ int main(int ac, char **av)
 	loadtexture(&mlx);
 	initialplayer(&mlx);
 	mapredring(&mlx);
+	mlx_hook(mlx.win, 17, 0, clean_exit, &mlx);
 	mlx_key_hook(mlx.win, hookwasd, &mlx);
 	mlx_loop(mlx.mlx);
 	free_map(mlx.map);

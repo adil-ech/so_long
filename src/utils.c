@@ -6,11 +6,11 @@
 /*   By: adechaji <adechaji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 16:44:57 by adechaji          #+#    #+#             */
-/*   Updated: 2025/01/09 21:31:03 by adechaji         ###   ########.fr       */
+/*   Updated: 2025/01/10 22:51:58 by adechaji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
 void	free_map(char **map)
 {
@@ -24,7 +24,17 @@ void	free_map(char **map)
 		free(map[i]);
 		i++;
 	}
-	free(map[i]);
+	free(map);
+}
+
+int	clean_exit(t_mlx *mlx)
+{
+	if (mlx->map)
+		free_map(mlx->map);
+	if (mlx->mlx && mlx->win)
+		mlx_destroy_window(mlx->mlx, mlx->win);
+	exit(0);
+	return (0);
 }
 
 int	acessisgood(int ac, char **av)

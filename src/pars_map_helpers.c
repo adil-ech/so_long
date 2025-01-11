@@ -6,11 +6,11 @@
 /*   By: adechaji <adechaji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 17:54:18 by adechaji          #+#    #+#             */
-/*   Updated: 2025/01/08 00:17:02 by adechaji         ###   ########.fr       */
+/*   Updated: 2025/01/10 22:51:23 by adechaji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
 int	hasanotherchar(char **map)
 {

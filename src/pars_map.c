@@ -6,13 +6,13 @@
 /*   By: adechaji <adechaji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 17:31:31 by adechaji          #+#    #+#             */
-/*   Updated: 2025/01/09 21:33:38 by adechaji         ###   ########.fr       */
+/*   Updated: 2025/01/10 23:05:34 by adechaji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
-static	int parsmap(char **map)
+static int	parsmap(char **map)
 {
 	if (!map || !map[0])
 	{
@@ -37,7 +37,7 @@ static	int parsmap(char **map)
 	return (1);
 }
 
-static	int mapelements(char **map)
+static int	mapelements(char **map)
 {
 	int	collectme;
 	int	exits;
@@ -66,10 +66,6 @@ static	int mapelements(char **map)
 
 int	ismapvalid(char **map)
 {
-	int		collectme;
-	int		y;
-	int		x;
-
 	if (parsmap(map) == 0)
 		return (0);
 	if (mapelements(map) == 0)

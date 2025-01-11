@@ -6,17 +6,17 @@
 /*   By: adechaji <adechaji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 12:43:10 by adechaji          #+#    #+#             */
-/*   Updated: 2025/01/09 18:52:15 by adechaji         ###   ########.fr       */
+/*   Updated: 2025/01/10 22:51:16 by adechaji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
 int	hookwasd(int key, t_mlx *mlx)
 {
 	if (key == 53)
 	{
-		mlx_destroy_window(mlx->mlx, mlx->win);
+		clean_exit(mlx);
 		exit(EXIT_SUCCESS);
 	}
 	if (key == 13)
