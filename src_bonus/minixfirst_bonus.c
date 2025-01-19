@@ -6,7 +6,7 @@
 /*   By: adechaji <adechaji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 10:27:54 by adechaji          #+#    #+#             */
-/*   Updated: 2025/01/12 00:58:49 by adechaji         ###   ########.fr       */
+/*   Updated: 2025/01/16 14:08:36 by adechaji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ static	void	normiesproc(t_mlx *mlx, int x, int y, int tsize)
 				mlx->texture[3], x * tsize, y * tsize);
 	}
 	else if (mlx->map[y][x] == 'X')
-			mlx_put_image_to_window(mlx->mlx, mlx->win,
-				mlx->texture[7], x * tsize, y * tsize);
+		mlx_put_image_to_window(mlx->mlx, mlx->win,
+			mlx->texture[7], x * tsize, y * tsize);
 }
 
 void	mapredring(t_mlx *mlx)
@@ -81,10 +81,11 @@ static void	definetextures(t_mlx *mlx)
 	mlx->texture[5] = mlx_xpm_file_to_image(mlx->mlx,
 			"textures/playerondoor.xpm", &img_w, &img_h);
 	mlx->texture[6] = mlx_xpm_file_to_image(mlx->mlx,
-		"textures/openeddoor.xpm", &img_w, &img_h);
+			"textures/openeddoor.xpm", &img_w, &img_h);
 	mlx->texture[7] = mlx_xpm_file_to_image(mlx->mlx,
-		"textures/enemy.xpm", &img_w, &img_h);
+			"textures/enemy.xpm", &img_w, &img_h);
 }
+
 void	loadtexture(t_mlx *mlx)
 {
 	int	i;

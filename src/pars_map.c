@@ -6,7 +6,7 @@
 /*   By: adechaji <adechaji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 17:31:31 by adechaji          #+#    #+#             */
-/*   Updated: 2025/01/10 23:05:34 by adechaji         ###   ########.fr       */
+/*   Updated: 2025/01/16 14:10:00 by adechaji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,11 +64,32 @@ static int	mapelements(char **map)
 	return (1);
 }
 
+static int	checkhw(char **map)
+{
+	int	h;
+	int	w;
+
+	h = 0;
+	w = ft_strlen(map[0]);
+	while (map[h])
+		h++;
+	if (h > 19 || w > 34)
+	{
+		write(2, "Error Map is too big\n", 22);
+		return (0);
+	}
+	return (1);
+}
+
 int	ismapvalid(char **map)
 {
+	if (!map || !map[0])
+		return (0);
 	if (parsmap(map) == 0)
 		return (0);
 	if (mapelements(map) == 0)
+		return (0);
+	if (checkhw(map) == 0)
 		return (0);
 	isitreachable(map);
 	return (1);

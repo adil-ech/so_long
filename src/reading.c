@@ -6,7 +6,7 @@
 /*   By: adechaji <adechaji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 00:34:20 by adechaji          #+#    #+#             */
-/*   Updated: 2025/01/10 22:51:47 by adechaji         ###   ########.fr       */
+/*   Updated: 2025/01/15 19:37:37 by adechaji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ static char	**readlines(int len, int fd)
 	char	*line;
 	int		i;
 
+	(void)len;
 	map = (char **)malloc(sizeof(char *) * (len + 1));
 	if (!map)
 		return (NULL);

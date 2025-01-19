@@ -6,7 +6,7 @@
 /*   By: adechaji <adechaji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 17:31:56 by adechaji          #+#    #+#             */
-/*   Updated: 2025/01/10 22:41:22 by adechaji         ###   ########.fr       */
+/*   Updated: 2025/01/16 14:21:21 by adechaji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,6 @@ typedef struct s_pdata
 	int		p_y;
 
 }	t_pdata;
-
-typedef struct s_pmap
-{
-	int		x;
-	int		y;
-}	t_pmap;
 
 typedef struct s_player
 {

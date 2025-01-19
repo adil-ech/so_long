@@ -6,7 +6,7 @@
 /*   By: adechaji <adechaji@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 17:31:56 by adechaji          #+#    #+#             */
-/*   Updated: 2025/01/12 00:58:53 by adechaji         ###   ########.fr       */
+/*   Updated: 2025/01/19 15:19:43 by adechaji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,24 +32,11 @@ typedef struct s_pdata
 
 }	t_pdata;
 
-typedef struct s_pmap
-{
-	int		x;
-	int		y;
-}	t_pmap;
-
 typedef struct s_player
 {
 	int	x;
 	int	y;
 }	t_player;
-
-typedef struct s_enemy
-{
-	int	x;
-	int	y;
-	int	look;
-}	t_enemy;
 
 typedef struct s_mlx
 {
@@ -60,10 +47,6 @@ typedef struct s_mlx
 	int			collectme;
 	int			moves;
 	t_player	player;
-	t_enemy		*enemies;
-	int			num_enem;
-	void		*enemleft;
-	void		*enemright;
 }	t_mlx;
 
 size_t	ft_strlen(const char *s);
