@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/bfa4060a-71f8-4392-9d81-0a0356bfc36d)
+
 # 🕹️ So\_long
 
 `so_long` is a 2D graphical game project from the 42 curriculum designed to introduce students to graphics programming using the MiniLibX library. The project involves rendering a map, handling keyboard input, managing sprites, and ensuring game logic.
